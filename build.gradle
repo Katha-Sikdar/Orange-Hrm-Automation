@@ -25,3 +25,27 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium Java dependency
+    implementation 'org.seleniumhq.selenium:selenium-java:4.x.x'
+
+    // WebDriver Manager to handle browser drivers
+    implementation 'io.github.bonigarcia:webdrivermanager:5.x.x'
+
+    // JUnit for testing (optional if you want to write tests)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.x.x'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.x.x'
+}
+
+test {
+    useJUnitPlatform()
+}
